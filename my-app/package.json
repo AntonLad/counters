@@ -1,7 +1,12 @@
 {
-  "name": "my-app",
+  "name": "counters-for-test",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "description": "Many counters, every fourth counts seconds",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntonLad/counters"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
