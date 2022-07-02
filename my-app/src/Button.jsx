@@ -8,7 +8,6 @@ import { changeFourCounter } from './redux/reducers/count'
 export default function Button() {
   const dispatch = useDispatch()
   const array = useSelector((s) => s.array.array)
-  const arrayFourCount = useSelector((s) => s.count.countArr)
   
   const onClick = () => {
     const sum = array.reduce((acc, rec) => {
@@ -17,27 +16,31 @@ export default function Button() {
     const newArray = [...array, { count: sum, id: Math.random() }]
     dispatch(updateArray(newArray))
     dispatch(changeFourCounter(newArray))
-    // newArray.map((it, ind) => {
-    //   console.log('ind', ind)
-    //   if ((ind + 1) % 4 === 0 ) {
-    //     console.log('IND', ind)
-    //     const newArr = [...arrayFourCount, { count: sum, id: it.id }]
-    //     dispatch(changeFourCounter(newArr))
-    //   }
-    // })
+    return newArray
+  }
 
-
-
+  const onClickDel = () => {
+    const newArray = array.slice(0, -1)
+    dispatch(updateArray(newArray))
+    dispatch(changeFourCounter(newArray))
     return newArray
   }
 
   return (
     <div>
-        <button 
+      <button
+        className="mainButtonAdd" 
         type="button"
         onClick={onClick}
       >
         Add counter
+      </button>
+      <button
+        className="mainButtonDel"
+        type="button"
+        onClick={onClickDel}
+      >
+        Delete counter
       </button>
     </div> 
   )

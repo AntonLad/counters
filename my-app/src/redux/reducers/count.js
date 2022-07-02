@@ -19,5 +19,7 @@ export default (state = initialState, action) => {
 } 
 
 export function changeFourCounter(arrayFourCount) {  
-  return { type: UPDATE_COUNT, payload: arrayFourCount }  
+  return (dispatch) => {
+    dispatch({ type: UPDATE_COUNT, payload: arrayFourCount })
+  }
 }  

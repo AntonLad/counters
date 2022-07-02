@@ -2,8 +2,7 @@
 const UPDATE_ARRAY = 'UPDATE_ARRAY' 
 
 const initialState = {
-  array: []
-  // array: [{ count: 1, id: 0 }]
+  array: [{ count: 0, id: 0 }]
 }  
   
 export default (state = initialState, action) => {  
