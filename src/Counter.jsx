@@ -73,6 +73,11 @@ export default function Counter() {
           </div>
         )
       })}
+      {/* <div style={{ display: 'flex'}}>
+        <div className="both">1</div>
+        <div className="horizontal">2</div>
+        <div className="vertical">3</div>
+      </div> */}
     </div>
   )
 }

@@ -21,7 +21,3 @@ export default (state = initialState, action) => {
 export function updateArray(arrayOfCounter) {  
   return { type: UPDATE_ARRAY, payload: arrayOfCounter }  
 } 
-
-export function increase(count) {  
-  return { type: UPDATE_ARRAY, payload: count }  
-} 
